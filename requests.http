@@ -1,0 +1,50 @@
+# примеры API-запросов
+
+@baseUrl = http://localhost:8080
+
+###
+
+# Тест неверного маршрута
+GET {{baseUrl}}/bad_route
+Content-Type: application/json
+
+###
+
+# Создание объявления
+POST {{baseUrl}}/advertisement
+Content-Type: application/json
+
+{
+  "title": "Saling house",
+  "description": "Very good house",
+  "author": "Vitaliy",
+  "price": "1k roubles"
+}
+
+###
+
+# Обновление объявления
+PATCH  {{baseUrl}}/advertisement/1/
+Content-Type: application/json
+
+{
+  "price": "10k roubles"
+}
+
+###
+
+# Получение информации по объявлению
+GET {{baseUrl}}/advertisement/1/
+Content-Type: application/json
+
+###
+
+# Получение информации по объявлению
+GET {{baseUrl}}/advertisement?author=Vitaliy&title=Saling%20house
+Content-Type: application/json
+
+###
+
+# Удаление объявления
+DELETE  {{baseUrl}}/advertisement/1/
+Content-Type: application/json

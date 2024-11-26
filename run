@@ -1,0 +1,4 @@
+docker-compose up -d --build
+
+# test with client.py or requests.http
+# also see http://127.0.0.1:8080/docs when started docker
